@@ -146,16 +146,16 @@ void perdeu() {
         Serial.print("Nivel atingido: ");
         Serial.println(nivel_atual);
         if (nivel_atual>2) {
-          analogWrite(led_verde, 200);
+          analogWrite(led_verde, 110);
         }
         if (nivel_atual>5) {
-          analogWrite(led_amarelo, 200);
+          analogWrite(led_amarelo, 102);
         }
         if (nivel_atual>8) {
-          analogWrite(led_vermelho, 200);
+          analogWrite(led_vermelho, 92);
         }
         if (nivel_atual>11) {
-          analogWrite(led_azul, 200);
+          analogWrite(led_azul, 160);
         }
         while(true) {} //apenas para parar a execução do código
         
@@ -198,7 +198,7 @@ void acende_toca(int cor) {
         
         //Verde
         if (cor == 1) {
-          analogWrite(led_verde, 200);
+          analogWrite(led_verde, 110);
           tone(buzzer, 300, tempo_nota);
           delay(tempo_nota);
           analogWrite(led_verde, LOW);
@@ -206,7 +206,7 @@ void acende_toca(int cor) {
       
         //Amarelo
         if (cor == 2) {
-          analogWrite(led_amarelo, 255);
+          analogWrite(led_amarelo, 102);
           tone(buzzer, 600, tempo_nota);
           delay(tempo_nota);
           analogWrite(led_amarelo, LOW);
@@ -214,7 +214,7 @@ void acende_toca(int cor) {
       
         //Vermelho
         if (cor == 3) {
-          analogWrite(led_vermelho, 255);
+          analogWrite(led_vermelho, 92);
           tone(buzzer, 1200, tempo_nota);
           delay(tempo_nota);
           analogWrite(led_vermelho, LOW);
@@ -222,7 +222,7 @@ void acende_toca(int cor) {
         
         //Azul
         if (cor == 4) {
-          analogWrite(led_azul, 200);
+          analogWrite(led_azul, 160);
           tone(buzzer, 2000, tempo_nota);
           delay(tempo_nota);
           analogWrite(led_azul, LOW);
@@ -235,7 +235,7 @@ void testa_hardware() {
   
   //Azul
   if (digitalRead(botao_azul) == LOW) {
-    analogWrite(led_azul, 200);
+    analogWrite(led_azul, 160);
     tone(buzzer, 2000, 10);
   }
   else {
@@ -244,7 +244,7 @@ void testa_hardware() {
 
   //Vermelho
   if (digitalRead(botao_vermelho) == LOW) {
-    analogWrite(led_vermelho, 255);
+    analogWrite(led_vermelho, 92);
     tone(buzzer, 1200, 10);
   }
   else {
@@ -253,7 +253,7 @@ void testa_hardware() {
 
   //Amarelo
   if (digitalRead(botao_amarelo) == LOW) {
-    analogWrite(led_amarelo, 255);
+    analogWrite(led_amarelo, 102);
     tone(buzzer, 600, 10);
   }
   else {
@@ -262,7 +262,7 @@ void testa_hardware() {
 
   //Verde
   if (digitalRead(botao_verde) == LOW) {
-    analogWrite(led_verde, 200);
+    analogWrite(led_verde, 110);
     tone(buzzer, 300, 10);
   }
   else {
