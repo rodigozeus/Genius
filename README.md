@@ -16,11 +16,7 @@
   Os pinos dos botões estão todos configurados como INPUT_PULLUP, também dispensando o
   uso de resistores adicionais.
   
-  Cada nota/botão/led é representado por um número inteiro de 1 a 4:
-     1 - Verde   
-     2 - Amarelo   
-     3 - Vermelho   
-     4 - Azul   
+  Cada nota/botão/led é representado por um número inteiro de 1 a 4: 1 - Verde, 2 - Amarelo, 3 - Vermelho e 4 - Azul. 
  
 
 
